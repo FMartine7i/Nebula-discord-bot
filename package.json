@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "lint": "npm standard",
+    "lint:fix": "standard --fix"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,13 @@
     "ascii-table": "^0.0.9",
     "discord.js": "^14.16.1",
     "dotenv": "^16.4.5",
-    "glob": "^8.0.3"
+    "glob": "^8.0.3",
+    "openai": "^4.58.2"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
