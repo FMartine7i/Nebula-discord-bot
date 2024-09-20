@@ -1,7 +1,7 @@
 async function loadCommands (client) {
   const { loadFiles } = require('../functions/fileLoader')
   const Ascii = require('ascii-table')
-  const table = new Ascii().setHeading('Commands', 'Status')
+  const table = new Ascii().setHeading('Slash commands', 'Status')
 
   await client.commands.clear()
   const commandsArr = []

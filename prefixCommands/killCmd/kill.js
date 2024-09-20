@@ -1,8 +1,7 @@
 const { EmbedBuilder } = require('discord.js')
-const greetGifs = require('./greetList.json')
+const killGifs = require('./killList.json')
 module.exports = {
-  name: 'greet',
-  aliases: ['hello'],
+  name: 'kill',
   async execute (message, args) {
     if (message.mentions.users.size === 0) return message.channel.send('Debes mencionar a un usuario para saludarlo.')
     const mentionedUser = message.mentions.users.first()
@@ -14,8 +13,8 @@ module.exports = {
       '#27e38b'
     ]
     const embed = new EmbedBuilder()
-      .setDescription(`${message.author} saluda a ${mentionedUser}`)
-      .setImage(greetGifs[Math.floor(Math.random() * greetGifs.length)])
+      .setDescription(`(◡︵◡) ${message.author} ha matado a ${mentionedUser}!`)
+      .setImage(killGifs[Math.floor(Math.random() * killGifs.length)])
       .setColor(colors[Math.floor(Math.random() * colors.length)])
       .setTimestamp()
     await message.delete()

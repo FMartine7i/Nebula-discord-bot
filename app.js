@@ -27,5 +27,7 @@ client.prefixes = new Collection()
 
 loadEvents(client)
 
+require('./handlers/antiCrash')(client)
+
 client
   .login(token)
